@@ -1,0 +1,19 @@
+{
+  "name": "dyslexic-claude",
+  "description": "Output style for readers with dyslexia and ADHD. Answer first, dense sentences, ranked recommendations, no menus. Full technical depth, less text.",
+  "version": "1.0.0",
+  "author": {
+    "name": "schananas",
+    "url": "https://github.com/schananas"
+  },
+  "homepage": "https://github.com/schananas/dyslexic-claude",
+  "repository": "https://github.com/schananas/dyslexic-claude",
+  "license": "MIT",
+  "keywords": [
+    "dyslexia",
+    "adhd",
+    "accessibility",
+    "output-style",
+    "readability"
+  ]
+}

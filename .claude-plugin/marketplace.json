@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "dyslexic-claude",
+  "description": "Output style that cuts the reading load of Claude Code answers for people with dyslexia and ADHD.",
+  "owner": {
+    "name": "schananas",
+    "url": "https://github.com/schananas"
+  },
+  "plugins": [
+    {
+      "name": "dyslexic-claude",
+      "description": "Answer first, dense sentences, ranked recommendations, no menus. Full technical depth, less text.",
+      "source": "./",
+      "category": "productivity"
+    }
+  ]
+}

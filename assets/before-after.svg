@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="552" viewBox="0 0 980 552" role="img" aria-label="Two Claude Code terminals side by side. The left answers the same question with a long survey of options. The right answers in word 1 and ends with 1 question.">
+  <rect width="980" height="552" fill="#ffffff"/>
+
+  <text x="24" y="38" font-family="SF Mono, Menlo, Consolas, monospace" font-size="12" fill="#57606a">BEFORE</text>
+  <text x="504" y="38" font-family="SF Mono, Menlo, Consolas, monospace" font-size="12" fill="#57606a">AFTER</text>
+
+  <rect x="24" y="48" width="452" height="480" rx="6" fill="#1e1e1e"/>
+  <rect x="504" y="48" width="452" height="480" rx="6" fill="#1e1e1e"/>
+
+  <g font-family="SF Mono, Menlo, Consolas, monospace" font-size="12.5" fill="#d4d4d4">
+    <text x="40" y="76">&gt; postgres or sqlite for this service?</text>
+
+    <text x="40" y="104">Great question. Both are solid choices here, and the</text>
+    <text x="40" y="121">right answer depends on your deployment model and on</text>
+    <text x="40" y="138">how much write concurrency you actually expect.</text>
+
+    <text x="40" y="163">PostgreSQL:</text>
+    <text x="40" y="180">- Handles concurrent writers well, using row level</text>
+    <text x="40" y="197">  locking rather than a single database write lock.</text>
+    <text x="40" y="214">- Rich indexing, including partial and expression</text>
+    <text x="40" y="231">  indexes, plus mature full text search support.</text>
+    <text x="40" y="248">- Requires running and maintaining a server process.</text>
+
+    <text x="40" y="273">SQLite:</text>
+    <text x="40" y="290">- Zero configuration, since the whole database is a</text>
+    <text x="40" y="307">  single file embedded in your own process.</text>
+    <text x="40" y="324">- Very fast reads once the dataset stays modest.</text>
+    <text x="40" y="341">- Serialises writes, which can cause lock contention</text>
+    <text x="40" y="358">  as soon as several writers arrive concurrently.</text>
+
+    <text x="40" y="383">Generally speaking, if you expect meaningful write</text>
+    <text x="40" y="400">concurrency or plan to scale out later, PostgreSQL is</text>
+    <text x="40" y="417">typically the safer long term choice. That said,</text>
+    <text x="40" y="434">SQLite is often perfectly adequate for lower traffic</text>
+    <text x="40" y="451">services and simplifies your operational story.</text>
+
+    <text x="40" y="476">Would you like me to sketch the docker-compose setup,</text>
+    <text x="40" y="493">benchmark both under your expected load, or outline</text>
+    <text x="40" y="510">what a later migration would involve?</text>
+  </g>
+
+  <g font-family="SF Mono, Menlo, Consolas, monospace" font-size="12.5" fill="#d4d4d4">
+    <text x="520" y="76">&gt; postgres or sqlite for this service?</text>
+
+    <text x="520" y="104">Postgres.</text>
+
+    <text x="520" y="138">SQLite serialises writes. Your 3 writers would</text>
+    <text x="520" y="155">queue.</text>
+
+    <text x="520" y="189">Want the docker-compose service?</text>
+  </g>
+</svg>
